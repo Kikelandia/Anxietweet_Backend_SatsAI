@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 import tweepy as tw
 from tqdm import tqdm
 
-from app.tweeter_Login import AccessTweeterAPI
+from app.twitter_Login import AccessTwitterAPI
 from app.constants import PublicConstants
 
 pd.set_option('display.max_colwidth', None)
@@ -13,7 +13,7 @@ class GetTweets():
 
     def __init__(self):
         self.constants = PublicConstants()
-        self.tweeterAPIAccessInfo = AccessTweeterAPI()
+        self.twitterAPIAccessInfo = AccessTwitterAPI()
 
     #Get and return one single tweet from the dataframe used for the training part
     def getOneTweetFromLocalDB(self):
@@ -27,7 +27,7 @@ class GetTweets():
 
     def getOneTweetFromTweeterAPI(self):
         #Get encrypted user name and password to access tweeter
-        encriptedinfo = self.tweeterAPIAccessInfo.encriptedUserIDandPassword()
+        encriptedinfo = self.twitterAPIAccessInfo.encriptedUserIDandPassword()
 
         #This "api" object works to acces securely within the Tweeter API
         api = tw.API(encriptedinfo, wait_on_rate_limit = self.constants.BOOL_TRUE)
