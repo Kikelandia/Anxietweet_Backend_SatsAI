@@ -1,6 +1,6 @@
 import tweepy as tw
 
-class AccessTweeterAPI():
+class AccessTwitterAPI():
     def __init__(self):
         self.consumer_api_key = "Twitter Developer Account User Name"
         self.consumer_api_secret = "Twitter Developer Account Password"
