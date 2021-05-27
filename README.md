@@ -5,7 +5,7 @@ Server side for Anxietweet App
 
 if you are interested in getting it please send an email to gilgamesh_0@hotmail.com
 
-In order to run everythin smothly you should request a twitter developer account and requesting your own user name and password,
+In order to run everything smothly you should request a twitter developer account and requesting your own user name and password,
 and then replace them inside the file twitter_Login.py
 
 Also please verify the requirement.txt file in order to confirm correct version of libraries used for this project
